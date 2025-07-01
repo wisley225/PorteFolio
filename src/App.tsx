@@ -1,15 +1,19 @@
-import { useState } from 'react'
-
+ 
 import './App.css'
+import Navbar from './accueil/navbar';
+import Header from './accueil/header';
+import Project from './accueil/project';
+import Service from './accueil/service';
 
 function App() {
 
   return (
     <>
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <h1 className="text-4xl font-bold text-blue-600">
-          React 18 + Vite + Tailwind CSS 3.4.17 prêt à coder !
-        </h1>
+      <div className=" bg-black text-white">
+        <Navbar/>
+        <Header/>
+        <Project/>
+        <Service/>
       </div>
     </>
   );
