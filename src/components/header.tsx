@@ -1,5 +1,4 @@
 
-import { GoArrowUpRight } from "react-icons/go";
 const Header = () => {
     return (
         <div className="   px-10 ">
