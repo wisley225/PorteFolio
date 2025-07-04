@@ -1,5 +1,5 @@
 
-
+import { GoArrowUpRight } from "react-icons/go";
 const Header = () => {
     return (
         <div className="   px-10 ">
@@ -14,7 +14,7 @@ const Header = () => {
         <div className=" h-60 flex flex-col justify-between pt-6 "> 
         <p className=" text-start"> Bonjour , je m'appelle Guei Lewis et je suis un 
          Full Stack qui crée des  applications web  et mobil elegantes avec php, Reactjs nestjs ,nextJs,flutter</p>
-       <input type="text" placeholder="see my work" className=" bg-black placeholder:text-white text-white border-b" />
+       
         </div>
          
         </div>

@@ -40,7 +40,7 @@ const Service = () => {
           <hr className="  border-1 border-gray-500 my-32" />
              
            <div className="">          
-           <ul className=" flex font-serif gap-10">
+           <ul className=" flex font-serif gap-10 mb-20">
 
               <li className=" text-3xl"> 
                  <p>Specialized in developing seamless web & mobile experiences</p> 

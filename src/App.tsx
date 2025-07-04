@@ -1,21 +1,17 @@
- 
 import './App.css'
-import Navbar from './accueil/navbar';
-import Header from './accueil/header';
-import Project from './accueil/project';
-import Service from './accueil/service';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import Accueil from './components/accueil';
+
+
 
 function App() {
 
   return (
-    <>
-      <div className=" bg-black text-white">
-        <Navbar/>
-        <Header/>
-        <Project/>
-        <Service/>
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Accueil />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
