@@ -31,7 +31,7 @@ useEffect(()=>{
                  
             </ul>
             <div className="flex  "> 
-               <p className=" font-black  text-center  w-full  text-[170px]   tracking-widest">{currentTime} AM</p> 
+               <p className=" font-black  text-center  w-full  text-[170px]   tracking-widest flex justify-between">  <span>{currentTime}</span>  <span>PM</span></p> 
                 </div>
         </div>
     );

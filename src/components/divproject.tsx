@@ -8,7 +8,7 @@ type DivProjectProps= {
 }
 const Divproject = ({genre, title, image}: DivProjectProps) => {
     return (
-        <div className=" cursor-pointer p-12 w-[430px] hover:bg-neutral-800 transition-all bg-neutral-900 ">
+        <div className="  bg-black cursor-pointer p-12 w-[430px] hover:bg-neutral-800 transition-all bg-neutral-900 ">
         <div className="flex flex-col   items-center  ">
         <div className=" w-full ">
             <h2 className=" text-3xl  font-black">{title}</h2>
