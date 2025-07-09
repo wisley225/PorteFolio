@@ -1,6 +1,7 @@
 import { useRef,useEffect } from "react"
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
 
 type Description={
     text1:string,
@@ -21,9 +22,9 @@ useEffect(()=>{
         duration:3,
         scrollTrigger:{
           trigger:hrRef.current,
-          scrub:1
-        }
-        
+          scrub:true,
+          
+        }      
       })
     })
 
