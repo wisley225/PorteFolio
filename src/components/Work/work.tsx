@@ -47,24 +47,14 @@ const items = [
      <div className='pt-20 px-10'>
         <TitleSection text=" Work"/>
 
-           <ul className='flex justify-between  items-start'>
+           <ul className='flex justify-between  items-start m-5 '>
             
             <li>
-            <ul>
-            <li className='text-2xl font-bold border-b flex items-end justify-between w-40'> <span className=''> All Project</span> <IoIosArrowDown/>  </li>
-            <li className=''>
-               <ul className='absolute z-10 leading-10 text-xl border p-3 bg-black w-52 mt-5 rounded-xl '>
-                <li>all</li>
-                <li>Web App</li>
-                <li>Website</li>
-                <li>E-commerce</li>
-                <li>Mobile App</li>
-            </ul>
-            </li> 
-            
-           </ul>
+              <span className='text-2xl font-bold underline'> All Project</span>
+         
             </li>
-            <li className='border-b text-2xl font-bold'>10 Project  </li>
+
+            <li className=' text-2xl font-bold underline'>10 Project  </li>
            </ul>
 
            
@@ -73,15 +63,9 @@ const items = [
 
      <div style={{ height: '600px', position: 'relative' }}>
    <InfiniteMenu items={items}/>
-   </div>
+     </div>
           
-            {/* <div  className=''>
-            <Divproject
-             title='Fresh Pharma'
-             genre=' site web'
-             image='/imagerie.png'
-             />
-            </div> */}
+      
       <Description
       text1='Crafting Digital Experiences with Artistic Precision'
       text2='Every Detail Matters'

@@ -5,7 +5,7 @@ import Work from './components/Work/work';
 import Service from './components/Service/service';
 import About from './components/Apropos/About';
 import Contact from './components/contact/contact';
-import Particles from './components/Particles';
+import WorkDetails from './components/workDetails';
 
 function App() {
 
@@ -17,6 +17,7 @@ function App() {
         <Route path='/service' element={<Service />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/work/details' element={<WorkDetails />} />
       </Routes>
     </BrowserRouter>
   );
