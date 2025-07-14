@@ -91,12 +91,8 @@ const items = [
              <li
              ref={(el) => {
             if (el) textRef.current[0] = el;
-          }} className="font-black text-3xl">
-               Featured Projects</li> 
-               <li
-               
-               ref={(el) => {
-            if (el) textRef.current[1] = el;
+          }} className="font-black text-3xl">  Featured Projects</li> 
+               <li ref={(el) => { if (el) textRef.current[1] = el;
           }}className=" text-2xl  cursor-pointer hover:text-gray-500 transition-all  flex justify-center items-end "> <span className=" "> see more</span> <GoArrowUpRight  className="  text-2xl"/> </li> </ul> 
            <hr ref={hrRef}  className=" border-1 border-gray-500 my-10" />
            <div className="relative h-[500px]">

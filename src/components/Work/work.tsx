@@ -41,28 +41,28 @@ const items = [
 ];
     
     return (
-        <div className='bg-black text-white '>
+        <div className='overflow-hidden bg-black text-white'>
         
             <Navbar/>
-     <div className='pt-20 px-10'>
+     <div className='pt-12 sm:pt-16 md:pt-18 lg:pt-20 px-4 sm:px-6 md:px-8 lg:px-10'>
         <TitleSection text=" Work"/>
 
-           <ul className='flex justify-between  items-start m-5 '>
+           <ul className='flex justify-between items-start m-2 sm:m-3 md:m-4 lg:m-5'>
             
             <li>
-              <span className='text-2xl font-bold underline'> All Project</span>
+              <span className='text-lg sm:text-xl md:text-2xl font-bold underline'> All Project</span>
          
             </li>
 
-            <li className=' text-2xl font-bold underline'>10 Project  </li>
+            <li className='text-lg sm:text-xl md:text-2xl font-bold underline'>10 Project  </li>
            </ul>
 
            
      </div>
 
 
-     <div style={{ height: '600px', position: 'relative' }}>
-   <InfiniteMenu items={items}/>
+     <div className="h-80 sm:h-96 md:h-[500px] lg:h-[550px] xl:h-[600px] relative">
+      <InfiniteMenu items={items}/>
      </div>
           
       
@@ -70,7 +70,7 @@ const items = [
       text1='Crafting Digital Experiences with Artistic Precision'
       text2='Every Detail Matters'
       text3='Every website I create is a masterpiece of elegance , where avery
-      detail is meticulously crafted to deliver an exceptional user experience'
+             detail is meticulously crafted to deliver an exceptional user experience'
       text4='With a commitment to unparalleled craftsmanship , i ensure aech Project is a Stunning blend of beauty and functionality, leaving a lasting impression that resonates'
       />   
       <Time/>

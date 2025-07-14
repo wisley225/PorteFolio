@@ -1304,11 +1304,25 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
           select-none
           absolute
           font-black
-          [font-size:4rem]
-          left-[1.6em]
+          text-xl
+          sm:text-2xl
+          md:text-3xl
+          lg:text-4xl
+          xl:text-5xl
+          2xl:text-6xl
+          left-2
+          sm:left-4
+          md:left-6
+          lg:left-8
+          xl:left-12
+          2xl:left-16
           top-1/2
           transform
-          translate-x-[20%]
+          translate-x-0
+          sm:translate-x-[5%]
+          md:translate-x-[10%]
+          lg:translate-x-[15%]
+          xl:translate-x-[20%]
           -translate-y-1/2
           transition-all
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
@@ -1326,16 +1340,29 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
             className={`
           select-none
           absolute
-          max-w-[10ch]
-          text-[1.5rem]
+          max-w-[6ch]
+          sm:max-w-[8ch]
+          md:max-w-[10ch]
+          lg:max-w-[12ch]
+          xl:max-w-[15ch]
+          text-xs
+          sm:text-sm
+          md:text-base
+          lg:text-lg
+          xl:text-xl
           top-1/2
-          right-[1%]
+          right-1
+          sm:right-2
+          md:right-4
+          lg:right-6
+          xl:right-8
+          2xl:right-12
           transition-all
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
           ${
             isMoving
-              ? "opacity-0 pointer-events-none duration-[100ms] translate-x-[-60%] -translate-y-1/2"
-              : "opacity-100 pointer-events-auto duration-[500ms] translate-x-[-90%] -translate-y-1/2"
+              ? "opacity-0 pointer-events-none duration-[100ms] translate-x-[-30%] -translate-y-1/2"
+              : "opacity-100 pointer-events-auto duration-[500ms] translate-x-[-70%] sm:translate-x-[-75%] md:translate-x-[-80%] lg:translate-x-[-85%] xl:translate-x-[-90%] -translate-y-1/2"
           }
         `}
           >
@@ -1348,12 +1375,26 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
           absolute
           left-1/2
           z-10
-          w-[60px]
-          h-[60px]
+          w-10
+          h-10
+          sm:w-12
+          sm:h-12
+          md:w-14
+          md:h-14
+          lg:w-16
+          lg:h-16
+          xl:w-20
+          xl:h-20
+          2xl:w-24
+          2xl:h-24
           grid
           place-items-center
           bg-[#00ffff]
-          border-[5px]
+          border-2
+          sm:border-3
+          md:border-4
+          lg:border-5
+          xl:border-6
           border-black
           rounded-full
           cursor-pointer
@@ -1361,12 +1402,12 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
           ${
             isMoving
-              ? "bottom-[-80px] opacity-0 pointer-events-none duration-[100ms] scale-0 -translate-x-1/2"
-              : "bottom-[3.8em] opacity-100 pointer-events-auto duration-[500ms] scale-100 -translate-x-1/2"
+              ? "bottom-[-40px] sm:bottom-[-50px] md:bottom-[-60px] lg:bottom-[-70px] xl:bottom-[-80px] opacity-0 pointer-events-none duration-[100ms] scale-0 -translate-x-1/2"
+              : "bottom-4 sm:bottom-6 md:bottom-8 lg:bottom-12 xl:bottom-16 2xl:bottom-20 opacity-100 pointer-events-auto duration-[500ms] scale-100 -translate-x-1/2"
           }
         `}
           >
-            <p className="select-none relative text-[#060010] top-[2px] text-[26px]">
+            <p className="select-none relative text-[#060010] top-[1px] sm:top-[2px] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
               &#x2197;
             </p>
           </div>

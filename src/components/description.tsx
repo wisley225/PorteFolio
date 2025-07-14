@@ -14,10 +14,10 @@ const Description = ({ text1, text2, text3, text4 }: Description) => {
 
   const hrRef = useRef<HTMLHRElement>(null)
   const textRef = useRef<HTMLParagraphElement[]>([])
-  const textRef2 = useRef<HTMLParagraphElement[]>([])
-  useEffect(() => {
-   
+  const textRef2 = useRef<HTMLParagraphElement[]>([]) 
+  const textAnime=useRef<HTMLUListElement>(null)
 
+  useEffect(() => {
      const ctx = gsap.context(() => {
 
        if (hrRef.current ) {
@@ -31,7 +31,7 @@ const Description = ({ text1, text2, text3, text4 }: Description) => {
 
         })
     }
-      if (textRef.current && textRef2.current) {
+      if (textAnime.current) {
       const splitText = new SplitType(textRef.current, { types: 'chars' })
        
       let tl=gsap.timeline()
@@ -39,11 +39,15 @@ const Description = ({ text1, text2, text3, text4 }: Description) => {
       tl.from(splitText.chars, {
        opacity:0,
        filter:'blur(4px)',
-       duration:0.1,
+       duration:1,
        stagger:0.05,
-         scrollTrigger: {
-            trigger: textRef.current,
-             scrub:1
+       scrollTrigger: {
+       trigger: textAnime.current,
+       start:' center top',
+      toggleActions: "play none reverse none ",
+            scrub: 1,
+            pin:true
+             
           }
 
         })
@@ -51,11 +55,14 @@ const Description = ({ text1, text2, text3, text4 }: Description) => {
         opacit:0,
       
         filter:'blur(10px)',
-        duration:0.01,
+        duration:0.1,
          stagger:0.01,
          scrollTrigger: {
-            trigger: textRef2.current,
-             toggleActions: "play none reverse none ",
+           trigger: textAnime.current,
+      toggleActions: "play none reverse none ",
+            scrub: 1,
+         
+
           }
       })
       
@@ -74,23 +81,25 @@ const Description = ({ text1, text2, text3, text4 }: Description) => {
   return <>
     <div className=" mb-32 ">
       <hr ref={hrRef} className="  border-1 border-gray-500 my-32" />
-      <ul className="flex font-serif  gap-10 mt-32  ">
-        <li className=" text-3xl">
+      <ul ref={textAnime} className="flex  font-serif  gap-10 mt-32  max-[1000px]:flex-col  max-[1000px]:items-center  ">
+      
+        <li className=" text-3xl max-[1000px]:text-center ">
           <p ref={(el) => {
-            if (el) textRef.current[0] = el;
-          }}> {text1} </p>
+            if (el) textRef.current[0] = el}}> {text1} </p>
         </li>
-        <li className=" text-end text-md">
+
+        <li className=" text-end text-md max-[1000px]:text-center ">
           <p ref={(el) => {
-            if (el) textRef.current[1] = el;
-          }}> {text2}</p>
+            if (el) textRef.current[1] = el}}> {text2}</p>
         </li>
-        <li className=" w-8/12 ">
+
+        <li className=" w-8/12  max-[1000px]:text-center ">
           <p ref={(el) => { if (el) textRef2.current[0] = el; }} className="mb-5 text-md ">{text3}</p>
           <p ref={(el) => { if (el) textRef2.current[1] = el; }} className=" text-md">
             {text4}
           </p>
         </li>
+
       </ul>
 
 

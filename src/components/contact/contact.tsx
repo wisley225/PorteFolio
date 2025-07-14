@@ -40,31 +40,57 @@ const Contact = () => {
 
     <>
     <Navbar/>
-<div className='bg-black text-white pt-48 px-10'>
+<div className='bg-black text-white pt-20 sm:pt-32 md:pt-48 px-4 sm:px-6 md:px-10 overflow-x-none'>
 <TitleSection text='Contact'/>
-<h2 className='text-3xl font-bold border-b-2 w-40 mb-10'>Discutons</h2>
-<div className='grid grid-cols-2 h-auto'>
+<h2 className='text-2xl sm:text-3xl font-bold border-b-2 w-32 sm:w-40 mb-6 sm:mb-10'>Discutons</h2>
+<div className='flex flex-col lg:flex-row gap-8 lg:gap-12 h-auto'>
 
-<div>
-    <h3 className='text-3xl font-bold '>Envoyer moi un message</h3>
-    <p className=' w-96 my-10'> si vous avez des questions ou souhaitez simplement me controler , n'hésitez pas de m'envoyer un massage je serais tout ravis de vous aider ou de repondre avec vous</p>
+<div className='w-full lg:w-1/2 text-center lg:text-left'>
+    <h3 className='text-2xl sm:text-3xl font-bold mb-4 sm:mb-6'>Envoyer moi un message</h3>
+    <p className='text-sm sm:text-base lg:text-lg max-w-md mx-auto lg:mx-0 lg:max-w-none my-6 sm:my-10'> 
+    </p>
 </div>
-    
- <div>
-    <form action="  border">
-        <div className='grid grid-cols-2 place-items-center  gap-10 pb-32 border-b-2'>
-            <input  type="text" placeholder='Prenom'  className=' outline-none place w-72 h-10 bg-black placeholder:text-white border-b-2 pb-5'/>
-      <input  type="text"  placeholder='Nom de Famille' className=' outline-none place w-72 h-10 bg-black placeholder:text-white border-b-2 pb-5 ' />
-      <input  type="email" placeholder='Email' className=' outline-none place w-72 h-10 bg-black placeholder:text-white border-b-2 pb-5' />
-      <input id="phone" type="tel" ref={inputRef} className=' outline-none place  w-72 h-10 bg-black placeholder:text-white border-b-2 pb-5'  />
-      <textarea name="" placeholder='Votre message' id="" className=' outline-none place overflow-y-hidden w-72 h-10 bg-black placeholder:text-white border-b-2 pb-5'></textarea>
+
+
+<div className='w-full lg:w-1/2'>
+    <form action="" className='w-full flex flex-col items-center lg:items-start'>
+      <div className='w-full flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 lg:gap-10 border-b-2 pb-6'>
+        <input  
+          type="text" 
+          placeholder='Prénom'  
+          className='w-full sm:w-52 outline-none h-10 bg-black placeholder:text-white border-b-2 pb-2 text-sm sm:text-base'
+        />
+        <input  
+          type="text"  
+          placeholder='Nom de Famille' 
+          className='w-full sm:w-52 outline-none h-10 bg-black placeholder:text-white border-b-2 pb-2 text-sm sm:text-base'
+        />
+        <input  
+          type="email" 
+          placeholder='Email' 
+          className='w-full sm:w-52 outline-none h-10 bg-black placeholder:text-white border-b-2 pb-2 text-sm sm:text-base'
+        />
+        <input 
+          id="phone" 
+          type="tel" 
+          ref={inputRef} 
+          className='w-full sm:w-52 outline-none h-10 bg-black placeholder:text-white border-b-2 pb-2 text-sm sm:text-base'
+        />
+        <textarea 
+          name="" 
+          placeholder='Votre message' 
+          id="" 
+          className='outline-none w-full lg:w-[458px] h-32 sm:h-40 bg-black placeholder:text-white border-b-2 pb-2 text-sm sm:text-base resize-none'
+        />
+      </div>
       
-        </div>
-      
-      <button className='border ml-auto block flex items-end text-xl  px-5 my-10 cursor-pointer py-2 hover:bg-neutral-800 transition-all'> <span>Envoyer le message </span> <GoArrowUpRight className=' text-2xl' /> </button>
+      <button className='border flex items-center gap-2 text-base sm:text-xl px-4 sm:px-5 my-6 sm:my-10 cursor-pointer py-2 hover:bg-neutral-800 transition-all self-end'> 
+        <span>Envoyer le message</span> 
+        <GoArrowUpRight className='text-xl sm:text-2xl' /> 
+      </button>
 
     </form>
-  </div>
+</div>
 
 </div>
 <Description

@@ -17,6 +17,17 @@ return<>
  text4=" Au fils des ans , cette passion a évolué vers une carrière où je transforme des idées en solution percutantes. a chaque projet j'apporte creativité, précision et engagement pour des résultats exceptionnels."
 />
 
+ <div className="flex gap-5 flex-wrap justify-center mb-10">
+ <DivSevice
+image="/vite.svg"
+title=" Développeur web React et nest"
+text="Expert en création d'application web dynamiques et
+ reactives avec ReactJS, NextJS ou NextJs. Nous nous concentrons 
+ sur la création d'experiences utilisateur fluides , en mettant l'accent
+ sur la performance,la maintenabilité et l'evolutivité.
+ "
+/>
+
 <DivSevice
 image="/vite.svg"
 title=" Développeur web React et nest"
@@ -26,6 +37,18 @@ text="Expert en création d'application web dynamiques et
  sur la performance,la maintenabilité et l'evolutivité.
  "
 />
+
+<DivSevice
+image="/vite.svg"
+title=" Développeur web React et nest"
+text="Expert en création d'application web dynamiques et
+ reactives avec ReactJS, NextJS ou NextJs. Nous nous concentrons 
+ sur la création d'experiences utilisateur fluides , en mettant l'accent
+ sur la performance,la maintenabilité et l'evolutivité.
+ "
+/>
+ </div>
+
 
 <Time/> 
 <Footer/>

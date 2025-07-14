@@ -43,14 +43,20 @@ const divRef=useRef<HTMLDivElement []>([])
   }, [])
 
     return (
-        <div className=" mx-10 mt-32 bg-black ">
-           <ul className="flex justify-between  "> <li className="font-black text-3xl"> services</li> <li className=" text-2xl  cursor-pointer hover:text-gray-500 transition-all  flex justify-center items-end "> <span className=" "> see more</span> <GoArrowUpRight  className="  text-2xl"/> </li> </ul> 
-           <hr  className=" border-1 border-gray-500 my-10" />
+        <div className="mx-4 sm:mx-6 md:mx-10 mt-16 sm:mt-24 md:mt-32 bg-black">
+           <ul className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0"> 
+             <li className="font-black text-2xl sm:text-3xl text-center sm:text-left">services</li> 
+             <li className="text-lg sm:text-xl md:text-2xl cursor-pointer hover:text-gray-500 transition-all flex justify-center items-center gap-2"> 
+               <span>see more</span> 
+               <GoArrowUpRight className="text-xl sm:text-2xl"/> 
+             </li> 
+           </ul> 
+           <hr className="border-1 border-gray-500 my-6 sm:my-8 md:my-10" />
              
-  <div  className=' flex justify-center gap-5 flex-wrap'>
+  <div className='flex flex-col lg:flex-row justify-center gap-6 sm:gap-8 lg:gap-5 flex-wrap'>
     <div ref={(el) => {
             if (el) divRef.current[0] = el;
-          }}>
+          }} className="w-full lg:w-auto">
    <DivService
      image="/vite.svg"
      title='web developer react & nest'
@@ -66,7 +72,7 @@ const divRef=useRef<HTMLDivElement []>([])
 <div
 ref={(el) => {
             if (el) divRef.current[1] = el;
-          }}
+          }} className="w-full lg:w-auto"
 >
     <DivService
      image="/vite.svg"
@@ -82,7 +88,7 @@ ref={(el) => {
  <div
  ref={(el) => {
             if (el) divRef.current[2] = el;
-          }}
+          }} className="w-full lg:w-auto"
  >
    <DivService
      image="/vite.svg"
