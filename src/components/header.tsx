@@ -149,7 +149,7 @@ const Header = () => {
   
     <div className=" flex justify-between gap-2 max-[1272px]:flex-wrap max-[700px]:flex-col max-[700px]:items-center ">
         <div className=" w-full max-w-[890px] flex justify-between items-end h-60 max-[970px]:h-32  max-[870px]:h-28  max-[700px]:h-24 max-[375px]:h-20 max-[320px]:h-16 max-[300px]:h-12  "> 
-            <span  className=" block max-[1170px]:text-[9rem] max-[1090px]:text-[8rem] max-[970px]:text-[6rem] max-[870px]:text-[5rem] max-[790px]:text-[4rem] max-[700px]:text-[3rem] max-[375px]:text-[2rem] max-[320px]:text-[1.5rem] max-[300px]:text-[1rem] w-full text-[9.8rem] uppercase font-bold tracking-tighter scale-y-[1.7] max-[400px]:scale-y-[1.2] max-[320px]:scale-y-[1]" >developer</span> {/* Added more breakpoints for font size and scaling */}
+            <span ref={developerRef} className=" block max-[1170px]:text-[9rem] max-[1090px]:text-[8rem] max-[970px]:text-[6rem] max-[870px]:text-[5rem] max-[790px]:text-[4rem] max-[700px]:text-[3rem] max-[375px]:text-[2rem] max-[320px]:text-[1.5rem] max-[300px]:text-[1rem] w-full text-[9.8rem] uppercase font-bold tracking-tighter scale-y-[1.7] max-[400px]:scale-y-[1.2] max-[320px]:scale-y-[1]" ></span> {/* Added more breakpoints for font size and scaling */}
             <span className={"blinking-cursor bg-white scale-y-[1.7] max-[400px]:scale-y-[1.2] max-[320px]:scale-y-[1]"} style={{opacity: showCursor ? 1 : 0}}>|</span>
         </div>
 
