@@ -15,7 +15,6 @@ const Header = () => {
   const developerRef = useRef<HTMLSpanElement>(null);
   const [showCursor, setShowCursor] = useState(true);
   const fullText = "developer";
-  const [loader,setLoader]=useState(false)
 
 
   useEffect(() => {

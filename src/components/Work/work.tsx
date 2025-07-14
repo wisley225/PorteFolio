@@ -4,12 +4,10 @@ import Description from '../description';
 import Time from '../time';
 import TitleSection from '../titleSection';
 import InfiniteMenu from './Infinitemenu';
-import { useState } from 'react';
 
 
 
 const Work = () => {
-const [workVisible,setWorkVisible]=useState(false)
 
 const items = [
   {
