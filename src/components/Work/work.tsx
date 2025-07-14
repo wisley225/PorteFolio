@@ -1,7 +1,5 @@
 import Navbar from '../navbar';
-import Divproject from '../divproject';
 import Footer from '../footer';
-import { IoIosArrowDown } from "react-icons/io";
 import Description from '../description';
 import Time from '../time';
 import TitleSection from '../titleSection';

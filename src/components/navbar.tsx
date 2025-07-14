@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { IoMenu } from "react-icons/io5";
 import gsap from "gsap";
 import { useState,useRef,useEffect } from "react";
 

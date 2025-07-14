@@ -4,7 +4,6 @@ import Description from './description';
 import { useRef, useEffect } from "react"
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger";
-import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger)
 const Service = () => {
 const divRef=useRef<HTMLDivElement []>([])

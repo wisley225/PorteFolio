@@ -16,7 +16,6 @@ const WorkDetails = () => {
   const [products, setProducts] = useState<ImageItem[]>([]);
   const [currentItems, setCurrentItems] = useState<ImageItem[]>([]);
   const [itemsOffset, setItemsOffset] = useState(0);
-  const [itemsPerPage, setItemsPerPage] = useState(3); // Changé de 10 à 2 pour afficher 2 images par page
   const [pageCount, setPageCount] = useState(0);
 
   // Déplacer l'initialisation des données dans useEffect
@@ -34,15 +33,15 @@ const WorkDetails = () => {
   }, []);
 
   useEffect(() => {
-    const endOffset = itemsOffset + itemsPerPage;
+    const endOffset = itemsOffset + 3; // itemsPerPage was removed, hardcoded to 3
     setCurrentItems(products.slice(itemsOffset, endOffset));
-    setPageCount(Math.ceil(products.length / itemsPerPage));
-  }, [itemsOffset, itemsPerPage, products]);
+    setPageCount(Math.ceil(products.length / 3)); // itemsPerPage was removed, hardcoded to 3
+  }, [itemsOffset, products]);
 
   const handlePageClick = (event: {
     selected: number;
   }) => {
-    const newOffset = (event.selected * itemsPerPage) % products.length;
+    const newOffset = (event.selected * 3) % products.length; // itemsPerPage was removed, hardcoded to 3
     setItemsOffset(newOffset);
   };
 

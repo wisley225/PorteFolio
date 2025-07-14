@@ -10,7 +10,6 @@ import Footer from '../footer';
 
 const Contact = () => {
   const inputRef = useRef<HTMLInputElement>(null);
-  const [dialCode, setDialCode] = useState('+225');
   const [countryIso, setCountryIso] = useState('ci');
 
   useEffect(() => {
@@ -25,7 +24,6 @@ const Contact = () => {
 
       const updateDialCode = () => {
         const data = iti.getSelectedCountryData();
-        setDialCode(data.dialCode ? `+${data.dialCode}` : '');
         setCountryIso(data.iso2 ?? 'ci')
     };
 

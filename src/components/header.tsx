@@ -19,7 +19,6 @@ const Header = () => {
   useEffect(() => {
     let timeout: any;
     let interval: any;
-    let isMounted = true;
 
     // Curseur clignotant
     interval = setInterval(() => {
@@ -28,7 +27,6 @@ const Header = () => {
 
     function typeWriterLoop() {
       if (!developerRef.current) return;
-      let i = 0;
       // Effet de saisie
       gsap.to({}, {
         duration: fullText.length * 0.12,
@@ -63,7 +61,6 @@ const Header = () => {
     }
     typeWriterLoop();
     return () => {
-      isMounted = false;
       clearTimeout(timeout);
       clearInterval(interval);
     };
