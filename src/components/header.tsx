@@ -107,7 +107,7 @@ const Header = () => {
       
 
     }
-      // Effet de saisie GSAP sur 'developer'
+      
       if (developerRef.current) {
         const text = "developer";
         developerRef.current.textContent = "";
@@ -135,41 +135,38 @@ const Header = () => {
     return (
 
       <>
- <div ref={animeRef} className=" overflow-x-hidden  px-10  ">
-         <div className="  flex flex-col h-screen max-[1272px]:h-[720px]  max-[970px]:h-[600px]   justify-col  justify-end text-white ">
-       <div ref={(el) => {
-            if (el) textRef.current[0] = el;
-          }}  className="flex  max-[375px]:text-[3rem]   max-[600px]:justify-center max-[1170px]:text-[9rem] max-[1090px]:text-[8rem] max-[970px]:text-[7rem] max-[870px]:text-[6rem] max-[790px]:text-[5rem] max-[700px]:text-[4rem]  items-center w-full text-[11rem] uppercase ">
-        <span className=" font-bold scale-y-[1.5] tracking-tighter">full</span>
-        <div className=" flex-1  mx-20 max-[600px]:mx-2 h-4  bg-white  " />
-        <span className=" font-bold scale-y-[1.5] tracking-tighter">stack</span>
-       </div>
+ <div ref={animeRef} className=" overflow-x-hidden  px-10 max-[375px]:px-5  ">
+        <div className="flex flex-col h-screen max-[1272px]:h-[720px] max-[970px]:h-[600px] justify-end text-white ">
+  
+    <div ref={(el) => {
+        if (el) textRef.current[0] = el;
+    }} className="flex max-[320px]:text-[1.5rem] max-[375px]:text-[2rem] max-[600px]:justify-center max-[700px]:text-[3.5rem] max-[790px]:text-[4.5rem] max-[870px]:text-[5.5rem] max-[970px]:text-[6.5rem] max-[1090px]:text-[7.5rem] max-[1170px]:text-[8.5rem] items-center w-full text-[11rem] uppercase ">
+        <span className=" font-bold scale-y-[1.5] max-[400px]:scale-y-[1] tracking-tighter">full</span>
+        <div className=" flex-1 mx-20 max-[600px]:mx-2 max-[320px]:mx-1 h-4 bg-white " /> 
+        <span className=" font-bold scale-y-[1.5] max-[400px]:scale-y-[1] tracking-tighter">stack</span>
+    </div>
 
-        <div  className="    flex  justify-between   gap-2  max-[1272px]:flex-wrap  "> 
-          <div className=" w-[890px]  flex  justify-between items-end  h-60  max-[970px]:h-32  max-[375px]:h-28  px-2  ">
-            <span ref={developerRef} className="  block max-[1170px]:text-[9rem] max-[1090px]:text-[8rem] max-[970px]:text-[7rem] max-[870px]:text-[6rem] max-[790px]:text-[5rem] max-[700px]:text-[4rem] max-[375px]:text-[3rem] w-full   text-[9.8rem] uppercase   font-bold tracking-tighter scale-y-[1.7]" ></span> 
-            <span className={"blinking-cursor  bg-white scale-y-[1.7]"} style={{opacity: showCursor ? 1 : 0}}>|</span>
-         </div>
+  
+    <div className=" flex justify-between gap-2 max-[1272px]:flex-wrap max-[700px]:flex-col max-[700px]:items-center ">
+        <div className=" w-full max-w-[890px] flex justify-between items-end h-60 max-[970px]:h-32  max-[870px]:h-28  max-[700px]:h-24 max-[375px]:h-20 max-[320px]:h-16 max-[300px]:h-12  "> 
+            <span  className=" block max-[1170px]:text-[9rem] max-[1090px]:text-[8rem] max-[970px]:text-[6rem] max-[870px]:text-[5rem] max-[790px]:text-[4rem] max-[700px]:text-[3rem] max-[375px]:text-[2rem] max-[320px]:text-[1.5rem] max-[300px]:text-[1rem] w-full text-[9.8rem] uppercase font-bold tracking-tighter scale-y-[1.7] max-[400px]:scale-y-[1.2] max-[320px]:scale-y-[1]" >developer</span> {/* Added more breakpoints for font size and scaling */}
+            <span className={"blinking-cursor bg-white scale-y-[1.7] max-[400px]:scale-y-[1.2] max-[320px]:scale-y-[1]"} style={{opacity: showCursor ? 1 : 0}}>|</span>
+        </div>
 
-     
-        <div ref={textRef2} className="   flex flex-col justify-end  gap-10   w-96  "> 
-       <div>
-        <p className="   ">
-            <i className="  "> Bonjour , je m'appelle Guei Lewis et je suis un 
-         Full Stack qui crée des  applications web  et mobil
-          elegantes avec php, Reactjs ,nestjs ,nextJs,flutter</i>
-          </p>
-        </div>  
-        
-          <Link  to='/work'  className=" border-b-2 flex   w-full justify-between  "><span className="">See my work </span> <GoArrowUpRight className="text-2xl "/></Link>
-        <div>
-   
+        <div ref={textRef2} className=" flex flex-col justify-end gap-10 max-[400px]:gap-6 max-[320px]:gap-4 w-full max-w-sm max-[700px]:mt-4 "> 
+            <div>
+                <p className=" text-base max-[320px]:text-sm "> 
+                    <i className=" "> Bonjour , je m'appelle Guei Lewis et je suis un
+                    Full Stack qui crée des applications web et mobil
+                    elegantes avec php, Reactjs ,nestjs ,nextJs,flutter</i>
+                </p>
+            </div>
+            <Link to='/work' className=" border-b-2 flex w-full justify-between "><span className="">See my work </span> <GoArrowUpRight className="text-2xl "/></Link>
+            <div>
+            </div>
         </div>
-        </div>
-         
-        </div>
-    
-         </div>
+    </div>
+</div>
           
         <Description
         text1="Specialized in developing seamless web & mobile experiences"
@@ -190,16 +187,4 @@ const Header = () => {
 
 export default Header;
 
-// Style du curseur clignotant
-// Tu peux déplacer ce style dans App.css si tu préfères
-<style>{`
-.blinking-cursor {
-  display: inline-block;
-  width: 0.5em;
-  animation: blink 1s steps(1) infinite;
-}
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
-}
-`}</style>
+
