@@ -38,7 +38,7 @@ useEffect(()=>{
     if (menuAction && clipathMenu.current) {
         gsap.to(clipathMenu.current,{
             clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0 100%)',
-            Duration:0.5
+            duration:0.5
         })
     }
   

@@ -15,6 +15,8 @@ const Header = () => {
   const developerRef = useRef<HTMLSpanElement>(null);
   const [showCursor, setShowCursor] = useState(true);
   const fullText = "developer";
+  const [loader,setLoader]=useState(false)
+
 
   useEffect(() => {
     let timeout: any;
@@ -32,12 +34,16 @@ const Header = () => {
         duration: fullText.length * 0.12,
         repeat: 0,
         onUpdate: function () {
-          const progress = this.progress();
-          const currentLength = Math.floor(progress * fullText.length);
-          developerRef.current!.textContent = fullText.slice(0, currentLength);
+          if (developerRef.current) {
+            const progress = this.progress();
+            const currentLength = Math.floor(progress * fullText.length);
+            developerRef.current.textContent = fullText.slice(0, currentLength);
+          }
         },
         onComplete: function () {
-          developerRef.current!.textContent = fullText;
+          if (developerRef.current) {
+            developerRef.current.textContent = fullText;
+          }
           // Pause avant d'effacer
           timeout = setTimeout(eraseWriter, 1200);
         }
@@ -47,12 +53,16 @@ const Header = () => {
           duration: fullText.length * 0.08,
           repeat: 0,
           onUpdate: function () {
-            const progress = this.progress();
-            const currentLength = fullText.length - Math.floor(progress * fullText.length);
-            developerRef.current!.textContent = fullText.slice(0, currentLength);
+            if (developerRef.current) {
+              const progress = this.progress();
+              const currentLength = fullText.length - Math.floor(progress * fullText.length);
+              developerRef.current.textContent = fullText.slice(0, currentLength);
+            }
           },
           onComplete: function () {
-            developerRef.current!.textContent = "";
+            if (developerRef.current) {
+              developerRef.current.textContent = "";
+            }
             // Pause avant de recommencer
             timeout = setTimeout(typeWriterLoop, 1200);
           }
@@ -106,12 +116,16 @@ const Header = () => {
           duration: text.length * 0.12,
           repeat: 0,
           onUpdate: function () {
-            const progress = this.progress();
-            const currentLength = Math.floor(progress * text.length);
-            developerRef.current!.textContent = text.slice(0, currentLength);
+            if (developerRef.current) {
+              const progress = this.progress();
+              const currentLength = Math.floor(progress * text.length);
+              developerRef.current.textContent = text.slice(0, currentLength);
+            }
           },
           onComplete: function () {
-            developerRef.current!.textContent = text;
+            if (developerRef.current) {
+              developerRef.current.textContent = text;
+            }
           }
         });
       }
@@ -120,7 +134,9 @@ const Header = () => {
   },[])
 
     return (
-        <div ref={animeRef} className=" overflow-x-hidden  px-10  ">
+
+      <>
+ <div ref={animeRef} className=" overflow-x-hidden  px-10  ">
          <div className="  flex flex-col h-screen max-[1272px]:h-[720px]  max-[970px]:h-[600px]   justify-col  justify-end text-white ">
        <div ref={(el) => {
             if (el) textRef.current[0] = el;
@@ -165,7 +181,9 @@ const Header = () => {
                   ensuring Seamless integration to innovation , delivering solutions
                    that are both functional and delightful. "
        />
-       </div>
+  </div>
+      </>
+       
    
   
   );

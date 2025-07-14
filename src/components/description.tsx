@@ -52,7 +52,7 @@ const Description = ({ text1, text2, text3, text4 }: Description) => {
 
         })
       .from(textRef2.current,{
-        opacit:0,
+      
       
         filter:'blur(10px)',
         duration:0.1,
