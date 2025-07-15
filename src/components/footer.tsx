@@ -1,11 +1,11 @@
 import { GoArrowUpRight } from "react-icons/go";
-
+import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <div className="px-4 sm:px-6 md:px-10 mt-10 pt-10 bg-neutral-900">
             <h4 className="font-extrabold text-2xl sm:text-3xl mb-6 sm:mb-10">Guei lewis</h4> 
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-between">
-                <div className=" w-full lg:w-1/2 flex flex-col justify-evenly items-start gap-6 sm:gap-8">
+                <form className=" w-full lg:w-1/2 flex flex-col justify-evenly items-start gap-6 sm:gap-8">
                     <span className="text-lg sm:text-xl lg:text-2xl font-thin">Subscribe To Newsletter</span>
                     <div className="border-b-2 flex items-center w-full">
                         <input 
@@ -15,11 +15,11 @@ const Footer = () => {
                         />
                         <GoArrowUpRight className="text-2xl sm:text-3xl lg:text-4xl ml-2"/>
                     </div>
-                    <div className="  text-sm sm:w-96 text-base sm:text-lg lg:text-xl cursor-pointer transition-all flex justify-center items-center h-10 border px-4 sm:px-5">
+                    <Link to='/contact' className="  text-sm sm:w-96 text-base sm:text-lg lg:text-xl cursor-pointer transition-all flex justify-center items-center h-10 border px-4 sm:px-5">
                         <span>  consultation gratuite</span> 
                         <GoArrowUpRight className="text-xl sm:text-2xl ml-2"/> 
-                    </div>
-                </div>
+                    </Link >
+                </form>
 
                 <div className="w-full lg:w-1/2 flex flex-col justify-evenly gap-6 sm:gap-8">
                     <ul className="flex flex-col sm:flex-row gap-6 sm:gap-8 lg:gap-12 w-full justify-between">

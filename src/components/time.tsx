@@ -1,6 +1,6 @@
 import { GoArrowUpRight } from "react-icons/go";
 import { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 const Time = () => {
 
 const [currentTime,setCurrentTime]=useState('')
@@ -28,7 +28,7 @@ useEffect(()=>{
                     Time To Level Up Your Business 
                 </li>
                 <li className="text-base sm:text-lg md:text-xl cursor-pointer transition-all flex justify-center items-center w-full sm:w-48 h-10 border px-4"> 
-                    <span>Let's Talk</span> 
+                   <Link to='/contact' >Let's Talk</Link> 
                     <GoArrowUpRight className="text-xl sm:text-2xl ml-2"/> 
                 </li>
             </ul>

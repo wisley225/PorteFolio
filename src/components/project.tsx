@@ -97,14 +97,15 @@ const items = [
            <hr ref={hrRef}  className=" border-1 border-gray-500 my-10" />
            <div className="relative h-[500px]">
             <InfiniteScroll
-    items={items}
-    isTilted={true}
-    tiltDirection='left'
-    autoplay={true}
-    autoplaySpeed={0.1}
-    autoplayDirection="down"
-    pauseOnHover={true}
-  />
+            items={items}
+            isTilted={true}
+            tiltDirection='left'
+            autoplay={true}
+            autoplaySpeed={0.1}
+            autoplayDirection="down"
+            pauseOnHover={true}
+             />
+
            </div>
           
            <Description

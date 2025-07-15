@@ -229,7 +229,7 @@ const Threads: React.FC<ThreadsProps> = ({
     };
   }, [color, amplitude, distance, enableMouseInteraction]);
 
-  return <div ref={containerRef} className="threads-container  w-full " {...rest} />;
+  return <div ref={containerRef} className="threads-container  w-full  " {...rest} />;
 };
 
 export default Threads;
