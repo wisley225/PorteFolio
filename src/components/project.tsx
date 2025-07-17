@@ -15,24 +15,18 @@ const Project = () => {
   const textRef2 = useRef<HTMLParagraphElement[]>([])
 
 const items = [
-  { content: "Text Item 1" },
-  { content:    <Divproject
-             title='Fresh Pharma'
+  { content: <Divproject
+             title="traitement d'image"
              genre=' site web'
              image='/imagerie.png'
              /> },
-  { content: "Text Item 3" },
-  { content: <p>Paragraph Item 4</p> },
-  { content: "Text Item 5" },
-  { content: <p>Paragraph Item 6</p> },
-  { content: "Text Item 7" },
-  { content: <p>Paragraph Item 8</p> },
-  { content: "Text Item 9" },
-  { content: <p>Paragraph Item 10</p> },
-  { content: "Text Item 11" },
-  { content: <p>Paragraph Item 12</p> },
-  { content: "Text Item 13" },
-  { content: <p>Paragraph Item 14</p> },
+  { content: <Divproject
+             title='site gaming'
+             genre=' site web'
+             image='/Gaming.png'
+             /> },
+
+ 
 ];
 
   useEffect(() => {
@@ -41,12 +35,12 @@ const items = [
      const ctx = gsap.context(() => {
 
        if (hrRef.current ) {
-     gsap.from(hrRef.current, {
+          gsap.from(hrRef.current, {
           width: '0%',
           duration: 2,
           scrollTrigger: {
-            trigger: hrRef.current,
-            scrub: 1
+          trigger: hrRef.current,
+          scrub: 1
           }
 
         })
@@ -61,12 +55,10 @@ const items = [
        filter:'blur(4px)',
        duration:0.1,
        stagger:0.05,
-         scrollTrigger: {
-            trigger: textRef.current,
-          toggleActions: "play none reverse none ",
-
-            
-          }
+       scrollTrigger: {
+       trigger: textRef.current,
+       toggleActions: "play none reverse none ",
+        }
 
         })
      

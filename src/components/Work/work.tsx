@@ -12,27 +12,35 @@ const Work = () => {
 const items = [
   {
     image: '/imagerie.png',
-    link: 'https://google.com/',
-    title: 'Item 1',
-    description: 'This is pretty cool, right?'
+    link: 'http://imagerie-git-master-wisley225s-projects.vercel.app',
+    title: 'Imagerie',
+    description: ' technologie : Nextjs , tailwinds css'
   },
   {
-    image: 'https://picsum.photos/400/400?grayscale',
-    link: 'https://google.com/',
-    title: 'Item 2',
-    description: 'This is pretty cool, right?'
+    image: '/Gaming.png',
+    link: 'https://site-gameing-gsap.vercel.app/',
+    title: 'GAMING',
+    description: 'react + vite, gsap , tailwind css'
   },
   {
-    image: 'https://picsum.photos/500/500?grayscale',
-    link: 'https://google.com/',
-    title: 'Item 3',
-    description: 'This is pretty cool, right?'
+    image: '/landingPage1.png',
+    link: 'https://projet-tailwind-4.vercel.app/',
+    title: 'Landing Page',
+    description: 'Technologie: html , tailwind'
   },
+
   {
-    image: 'https://picsum.photos/600/600?grayscale',
-    link: 'https://google.com/',
-    title: 'Item 4',
-    description: 'This is pretty cool, right?'
+    image: '/porteFolio.png',
+    link: 'https://mon-portfolio-rose-nine.vercel.app',
+    title: 'porteFolio',
+    description: ' technologie: React+vite, tailwind css'
+  },
+
+  {
+    image: '/weseemba1.png',
+    link: 'https://formulaire-next-js-2.vercel.app/',
+    title: 'Weseemba',
+    description: ' technologie: Nextjs , gsap, tailwind css'
   }
 ];
 

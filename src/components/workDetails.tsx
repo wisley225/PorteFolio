@@ -21,13 +21,19 @@ const WorkDetails = () => {
   // Déplacer l'initialisation des données dans useEffect
   useEffect(() => {
     const tabImage: ImageItem[] = [
-      { id: 1, img: '/imagerie.png' },
-      { id: 2, img: '/imagerie.png' },
-      { id: 3, img: '/imagerie.png' },
-      { id: 4, img: '/imagerie.png' },
-      { id: 5, img: '/imagerie.png' },
-      { id: 6, img: '/imagerie.png' },
-      { id: 7, img: '/imagerie.png' }
+      { id: 2, img: '/Gaming.png' },
+      { id: 4, img: '/gaming2.png' },
+      { id: 6, img: '/gaming4.png' },
+      { id: 7, img: '/gaming5.png' },
+      { id: 8, img: '/gaming7.png' },
+      { id: 9, img: '/gaming8.png' },
+      { id: 10, img: '/gaming9.png' },
+      { id: 11, img: '/gaming9.png' },
+      { id: 12, img: '/imagerie1.png' },
+      { id: 13, img: '/imagerie2.png' },
+      { id: 14, img: '/imagerie3.png' },
+      { id: 15, img: '/imagerie5.png' },
+      { id: 16, img: '/imagerie5.png' },
     ];
     setProducts(tabImage);
   }, []);
@@ -105,8 +111,8 @@ const WorkDetails = () => {
           </div>
           <ul className="gap-4 sm:gap-10 flex flex-col sm:flex-row justify-center my-10 sm:my-20">
             {currentItems.map((image) => (
-              <li key={image.id} className="border h-40 sm:h-[400px] w-full sm:w-auto flex items-center justify-center">
-                <img src={image.img} alt="" className="w-full h-full object-cover object-center" />
+              <li key={image.id} className="border h-40 w-96 sm:h-[400px]   ">
+                <img src={image.img} alt="" className="size-full object-center object-center " />
               </li>
             ))}
           </ul>

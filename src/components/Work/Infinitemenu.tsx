@@ -1242,11 +1242,36 @@ interface InfiniteMenuProps {
 const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(
     null
-  ) as MutableRefObject<HTMLCanvasElement | null>;
+  ) ;
   const [activeItem, setActiveItem] = useState<MenuItem | null>(null);
   const [isMoving, setIsMoving] = useState<boolean>(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  // Préchargement des images
+  useEffect(() => {
+    if (!items.length) {
+      setImagesLoaded(true);
+      return;
+    }
+    let isCancelled = false;
+    let loaded = 0;
+    items.forEach((item) => {
+      const img = new window.Image();
+      img.src = item.image;
+      img.onload = img.onerror = () => {
+        loaded++;
+        if (loaded === items.length && !isCancelled) {
+          setImagesLoaded(true);
+        }
+      };
+    });
+    return () => {
+      isCancelled = true;
+    };
+  }, [items]);
 
   useEffect(() => {
+    if (!imagesLoaded) return;
     const canvas = canvasRef.current;
     let sketch: InfiniteGridMenu | null = null;
 
@@ -1278,7 +1303,7 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [items]);
+  }, [items, imagesLoaded]);
 
   const handleButtonClick = () => {
     if (!activeItem?.link) return;
@@ -1288,6 +1313,14 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
       console.log("Internal route:", activeItem.link);
     }
   };
+
+  if (!imagesLoaded) {
+    return (
+      <div className="w-full h-full flex items-center justify-center bg-black text-white">
+        <span>Chargement des images...</span>
+      </div>
+    );
+  }
 
   return (
     <div className="relative w-full h-full">
