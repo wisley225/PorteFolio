@@ -1,4 +1,4 @@
-import type { FC, MutableRefObject } from "react";
+import type { FC} from "react";
 import { useRef, useState, useEffect } from "react";
 import { mat4, quat, vec2, vec3 } from "gl-matrix";
 
