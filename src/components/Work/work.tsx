@@ -18,13 +18,13 @@ const items = [
   },
   {
     image: '/Gaming.png',
-    link: 'https://site-gameing-gsap.vercel.app/',
+    link: 'https://site-gameing-gsap.vercel.app',
     title: 'GAMING',
     description: 'react + vite, gsap , tailwind css'
   },
   {
     image: '/landingPage1.png',
-    link: 'https://projet-tailwind-4.vercel.app/',
+    link: 'https://mes-exercice.vercel.app',
     title: 'Landing Page',
     description: 'Technologie: html , tailwind'
   },
@@ -38,9 +38,21 @@ const items = [
 
   {
     image: '/weseemba1.png',
-    link: 'https://formulaire-next-js-2.vercel.app/',
+    link: 'https://formulaire-next-js-2.vercel.app',
     title: 'Weseemba',
     description: ' technologie: Nextjs , gsap, tailwind css'
+  },
+  {
+    image: '/music.png',
+    link: 'https://mes-exercice-taimwind6.vercel.app/',
+    title: 'Music',
+    description: ' technologie:html,tailwind css'
+  },
+  {
+    image: '/burger.png',
+    link: 'https://mes-exercice7.vercel.app//',
+    title: 'home burger',
+    description: ' technologie:html,tailwind css'
   }
 ];
 
